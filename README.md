@@ -14,6 +14,8 @@
 		work (írja ki az ember nevét és hogy dolgozik csökkentse a boldogságát)
 
 		lunch (írja ki az ember nevét és hogy mit eszik (paraméterben kapja) eszik növelje a boldogságát)
+		
+		birthDayFest (növelje a kort 1 ével illetve a boldogságot)
 
 ### 	d, Készíts konstruktort ami beállítja a fieldeket
 
