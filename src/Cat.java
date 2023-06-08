@@ -3,11 +3,10 @@ import java.util.Random;
 public class Cat {
     private String name;
     private String gender;
-    private int age = 10;
+    private int age ;
 
-    public Cat(String gender){
-        this(gender, "anonymus", 0);
-    }
+
+
 
     public Cat(String name, int age){
         this.name = name;
@@ -17,7 +16,9 @@ public class Cat {
         this.age = age;
         this.gender = gender;
         this.name = name;
+
     }
+
 
     public void eat(String food){
         System.out.println(name + " eszik " + food);

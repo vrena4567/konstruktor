@@ -3,6 +3,15 @@ public class People {
     private String gender;
     private int age;
     private int happyScore;
+    private Cat myCat;
+
+    public People(String name, String gender, int age, int happyScore, Cat myCat) {
+        this.name = name;
+        this.gender = gender;
+        this.age = age;
+        this.happyScore = happyScore;
+        this.myCat = myCat;
+    }
 
     public void work(){
         happyScore--;
@@ -18,6 +27,10 @@ public class People {
         happyScore += 5;
         age++;
         System.out.println(name + " szülinapja van");
+    }
+    public void pet(){
+        myCat.purr();
+        this.happyScore++;
     }
 
     public String getName() {
@@ -50,5 +63,13 @@ public class People {
 
     public void setHappyScore(int happyScore) {
         this.happyScore = happyScore;
+    }
+
+    public void setMyCat(Cat myCat){
+        this.myCat = myCat;
+    }
+
+    public Cat getMyCat(){
+        return myCat;
     }
 }
