@@ -1,7 +1,23 @@
+import java.util.Random;
+
 public class Cat {
     private String name;
     private String gender;
-    private int age;
+    private int age = 10;
+
+    public Cat(String gender){
+        this(gender, "anonymus", 0);
+    }
+
+    public Cat(String name, int age){
+        this.name = name;
+        this.age = age;
+    }
+    public Cat(String gender, String name, int age){
+        this.age = age;
+        this.gender = gender;
+        this.name = name;
+    }
 
     public void eat(String food){
         System.out.println(name + " eszik " + food);
@@ -16,6 +32,9 @@ public class Cat {
     }
 
     public void setName(String name) {
+        if(name.length() < 3){
+            return;
+        }
         this.name = name;
     }
 
@@ -32,6 +51,12 @@ public class Cat {
     }
 
     public void setAge(int age) {
+        if(age < 0){
+            Random random = new Random();
+            this.age = random.nextInt(Integer.MAX_VALUE);
+            return;
+        }
         this.age = age;
     }
+
 }
