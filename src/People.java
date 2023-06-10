@@ -1,7 +1,7 @@
 public class People extends Mammal {
     private int happyScore;
 
-    Cat myCat = new Cat();
+    Cat myCat = new Cat("Alma", "male", 2);
 
 
     public int getHappyScore() {
@@ -21,16 +21,15 @@ public class People extends Mammal {
     }
 
     public void birthDayFest() {
-        this.getAge();
+        this.age++;
         happyScore += 10;
     }
 
- // public People(String name, int age, String catname) {
- //     myCat.setName(catname);
- //     this.setName(name);
- //     this.setAge(age);
- //     this.happyScore = 120;
- // }
+  public People(String name, String gender, int age, int happyScore, String catname) {
+        super(name, gender, age);
+      this.happyScore = happyScore;
+      myCat.setName(catname);
+  }
 
     public void pet() {
         happyScore++;
