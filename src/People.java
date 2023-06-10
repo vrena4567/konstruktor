@@ -1,5 +1,4 @@
 public class People extends Mammal {
-
     private int happyScore;
 
     Cat myCat = new Cat();
@@ -22,16 +21,16 @@ public class People extends Mammal {
     }
 
     public void birthDayFest() {
-  //      age += 1;
+        this.getAge();
         happyScore += 10;
     }
 
-    public People(String name, int age, String catname) {
-        myCat.setName(catname);
-        this.setName(name);
-        this.setAge(age);
-        this.happyScore = 120;
-    }
+ // public People(String name, int age, String catname) {
+ //     myCat.setName(catname);
+ //     this.setName(name);
+ //     this.setAge(age);
+ //     this.happyScore = 120;
+ // }
 
     public void pet() {
         happyScore++;
